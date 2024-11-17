@@ -13,10 +13,10 @@ https://www.npmjs.com/package/react-native-skeleton-content
 https://www.npmjs.com/package/react-loading-skeleton
 
 */
-import {View, Text} from 'react-native';
+import { Text, View } from "react-native";
 
 export default function Homepage() {
-    return(
-        <Text>Homepage</Text>
+    return (
+        <Text>This is a fully functional homepage</Text>
     )
 }

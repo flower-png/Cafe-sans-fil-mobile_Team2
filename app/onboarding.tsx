@@ -61,9 +61,12 @@ function Page4(){
     const router = useRouter();
     return(
         <View style={styles.pageContainer}>
-            <TouchableOpacity onPress={() => {router.push("/homepage")}}>
-                <Text style={styles.centerButton}>
-                    Go to Homepage
+            <Text style={{textAlign:'center', padding: 10}}>Du texte indiquant la fin du onboarding process...
+                (et peut-être une image)
+            </Text>
+            <TouchableOpacity onPress={() => {router.push("/login")}} style={styles.centerButton}>
+                <Text style={FONTS.buttonText}>
+                    Go to Login
                 </Text>
             </TouchableOpacity>
         </View>
