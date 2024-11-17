@@ -13,10 +13,21 @@ https://www.npmjs.com/package/react-native-skeleton-content
 https://www.npmjs.com/package/react-loading-skeleton
 
 */
-import { Text, View } from "react-native";
+import { Text, StyleSheet } from "react-native";
 
 export default function Homepage() {
     return (
-        <Text>This is a fully functional homepage</Text>
+        <Text style={styles.exempleText}> This is a fully functional homepage {"\n"}
+        ...kinda
+        </Text>
     )
 }
+
+const styles = StyleSheet.create({
+// mettez vos styles ici
+    exempleText :{
+        textAlign: 'center',
+        fontSize: 20,
+        marginTop:50
+    }
+});

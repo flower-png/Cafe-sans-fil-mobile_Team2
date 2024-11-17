@@ -24,6 +24,10 @@ export default function Login() {
             <TouchableOpacity onPress={() => {router.push('/resetpwd')}}>
                 <Text style={styles.hypertext}>Well, well, well... password forgotten?</Text>
             </TouchableOpacity>
+
+            <TouchableOpacity onPress={() => {router.push('/homepage')}}>
+                <Text style={{...styles.hypertext, marginTop:15}}>Go to homepage</Text>
+            </TouchableOpacity>
         </View>
     )
 }
