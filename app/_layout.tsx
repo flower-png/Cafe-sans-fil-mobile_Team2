@@ -7,7 +7,7 @@ export default function RootLayout() {
 			<Stack.Screen name="login" options={{ headerShown: true, headerTitle: "Login Page" }} />
 			<Stack.Screen name="onboarding" options={{ headerShown: true }} />
 			<Stack.Screen name="resetPwd" options={{ headerShown: true }} />
-      <Stack.Screen name="homepage" options={{ headerShown: false }} />
+      <Stack.Screen name="homepage" options={{ headerShown: true }} />
     </Stack>
   );
 }

@@ -14,8 +14,8 @@ export default function Index() {
       }}
     >
       <TouchableOpacity
-        onPress={() => {router.push("/login")}}>
-      <Text>Je suis un boutton qui redirige vers login</Text>
+        onPress={() => {router.push("/homepage")}}>
+      <Text>Je suis un boutton qui redirige vers homepage</Text>
       </TouchableOpacity>
 
       <TouchableOpacity
