@@ -12,7 +12,7 @@ Documentation du component modal: https://reactnative.dev/docs/modal
 // pour l'instant, les infos dans cet exemple devraient suffire
 import { useState } from 'react';
 import {itemObj} from '../assets/exemple_data/item_exemple';
-import { Alert, View, Text, TouchableOpacity, Modal, ScrollView, Pressable} from 'react-native';
+import { Alert, View, Text, TouchableOpacity, Modal, ScrollView, Pressable, StyleSheet} from 'react-native';
 import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
 
 
@@ -22,24 +22,55 @@ export default function Item(){
     
     return(
         <SafeAreaProvider>
-            <SafeAreaView>
+            <SafeAreaView style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
                 <Modal animationType="slide"
                     transparent={true}
                     visible={isModalVisible}
                     onRequestClose={() => {
-                        Alert.alert('Modal has been closed.');
                         setIsModalVisible(!isModalVisible);
                     }}>
                     
+                        <View style={styles.centeredView}>
+                            <ScrollView>
+                                <View style={styles.modalContainer}>
+                                        <Text>Ceci est un modal</Text> 
+                                        
+                                        <TouchableOpacity onPress={() => setIsModalVisible(!isModalVisible)} style={{flexDirection:'row-reverse'}}>
+                                            <Text style={{color:'red'}}>Hide Modal</Text>
+                                        </TouchableOpacity>
+                                </View>
+                            </ScrollView>
+                        </View>
                 </Modal>
 
-                <Pressable
-                onPress={() => setIsModalVisible(true)}>
-                    <Text>Show Modal</Text>
-                </Pressable>
+                <TouchableOpacity onPress={() => setIsModalVisible(true)} style={{backgroundColor:'grey', borderRadius:25, margin:30}}>
+                    <Text style={{textAlign:'center', fontSize:20, margin:20}}>Show Modal</Text>
+                </TouchableOpacity>
             </SafeAreaView>
         </SafeAreaProvider>
 
     );
-
 }
+
+const styles = StyleSheet.create({
+    modalContainer:{
+        backgroundColor: "white",
+        borderRadius: 15,
+        padding: 100,
+        alignItems: "center",
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 2
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+        elevation: 5
+    },
+    centeredView: {
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+        marginTop: 22
+    }
+});
