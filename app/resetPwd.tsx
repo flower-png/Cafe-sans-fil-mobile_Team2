@@ -8,3 +8,11 @@ deuxieme pour confirmer password
 
 il y aura ensuite un boutton qui va envoyer une api request pour updater le compte de l'utilisateur
 */
+
+import {Text} from 'react-native';
+
+export default function ResetPwd() {
+    return(
+        <Text>Reset your password? lol</Text>
+    )
+}
