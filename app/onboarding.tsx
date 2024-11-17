@@ -127,18 +127,6 @@ export default function OnBoarding() {
 				backgroundColor: 'white',
 				alignItems: "flex-start",
 			}}>
-            <TouchableOpacity
-            onPress={() => handleGesture(0)}
-            style={{ alignItems: "center" }}>
-            <View
-                style={{
-                    width: "125%",
-                    height: 3,
-                    backgroundColor: currentPage === 1 ? "#292C37" : "transparent",
-                    marginTop: 5,
-                }}
-            />
-            </TouchableOpacity>
             <Animated.View
             style={{
                 flexDirection: "row",
