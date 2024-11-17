@@ -24,7 +24,7 @@ export default function Login() {
         <View style={styles.loginContainer}>
             <Text style={{textAlign:'center'}}>This is a fully functional login page</Text>
 
-            <TouchableOpacity onPress={() => {router.push('/resetpwd')}}>
+            <TouchableOpacity onPress={() => {router.push('/resetPwd')}}>
                 <Text style={styles.hypertext}>Well, well, well... password forgotten?</Text>
             </TouchableOpacity>
 
