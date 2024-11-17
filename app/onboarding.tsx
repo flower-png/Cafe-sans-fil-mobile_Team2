@@ -65,7 +65,7 @@ function Page4(){
                 (et peut-être une image)
             </Text>
             <TouchableOpacity onPress={() => {router.push("/login")}} style={styles.centerButton}>
-                <Text style={FONTS.buttonText}>
+                <Text style={styles.textButton}>
                     Go to Login
                 </Text>
             </TouchableOpacity>
@@ -172,9 +172,7 @@ const styles = StyleSheet.create({
         margin:100
     },
     textButton:{
-        color: 'white',
-        fontSize: FONTS.buttonText.fontSize,
-        fontFamily: FONTS.buttonText.fontFamily
+        ...FONTS.generalText, fontSize:20
     }
 
 });

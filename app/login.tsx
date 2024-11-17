@@ -17,6 +17,9 @@ export default function Login() {
     //initialisation du router (pour rediriger vers une autre page)
     const router = useRouter();
 
+    // au lieu de tout de suite push vers homepage, il faut d'abord vérifier via l'api que les
+    // logs dans les textInputs sont valides. Et afficher une erreur sinon.
+
     return (
         <View style={styles.loginContainer}>
             <Text style={{textAlign:'center'}}>This is a fully functional login page</Text>
@@ -26,7 +29,7 @@ export default function Login() {
             </TouchableOpacity>
 
             <TouchableOpacity onPress={() => {router.push('/homepage')}}>
-                <Text style={{...styles.hypertext, marginTop:15}}>Go to homepage</Text>
+                <Text style={{...styles.hypertext, marginTop:15}}>Login and go to homepage</Text>
             </TouchableOpacity>
         </View>
     )
@@ -42,7 +45,7 @@ const styles = StyleSheet.create({
     hypertext:{
         color: 'blue',
         textDecorationLine:'underline',
-        fontFamily: FONTS.buttonText.fontFamily,
+        fontFamily: FONTS.generalText.fontFamily,
         textAlign:'center'        
     }
 });

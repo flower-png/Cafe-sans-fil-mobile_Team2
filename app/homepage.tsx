@@ -7,6 +7,7 @@ Choses importantes à définir avant de commencer:
     - choisir une UI pas trop cluttered
 
 Chaque container de café sera wrapped dans une touchable opacity qui redirigera vers la page individuelle des cafés
+(pour l'instant).
 
 ressources pouvant être utile:
 https://www.npmjs.com/package/react-native-skeleton-content
@@ -14,6 +15,11 @@ https://www.npmjs.com/package/react-loading-skeleton
 
 */
 import { Text, StyleSheet } from "react-native";
+import {FONTS} from '../static/theme';
+
+//utilisez cet objet pour récupérer les infos d'un café
+// si vous voulez les infos pour plus de cafés, écrivez une requête dans le dossier ~/script
+import {cafeObj} from "../assets/exemple_data/cafe_exemple";
 
 export default function Homepage() {
     return (
@@ -28,6 +34,7 @@ const styles = StyleSheet.create({
     exempleText :{
         textAlign: 'center',
         fontSize: 20,
-        marginTop:50
+        marginTop:50,
+        fontFamily: FONTS.generalText.fontFamily
     }
 });

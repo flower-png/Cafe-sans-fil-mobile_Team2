@@ -1,7 +1,10 @@
 export const FONTS = {
-	buttonText: {
+	generalText: {
 		fontFamily: "DMSans-Thin",
-		fontSize: 20,
         color: 'white'
+	},
+	hyperText:{
+		color:'blue',
+		textDecorationLine:'underline'
 	}
 }
