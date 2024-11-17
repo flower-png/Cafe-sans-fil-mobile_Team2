@@ -15,8 +15,14 @@ export default function Index() {
     >
       <TouchableOpacity
         onPress={() => {router.push("/login")}}>
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+      <Text>Je suis un boutton qui redirige vers login</Text>
       </TouchableOpacity>
+
+      <TouchableOpacity
+        onPress={() => {router.push("/onboarding")}}>
+      <Text>Je suis un boutton qui redirige vers la page d'onboarding</Text>
+      </TouchableOpacity>
+      
     </View>
   );
 }
