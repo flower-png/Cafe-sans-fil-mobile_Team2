@@ -13,6 +13,6 @@ import {Text} from 'react-native';
 
 export default function ResetPwd() {
     return(
-        <Text>Reset your password? lol</Text>
+        <Text>Reset your password? gl lol</Text>
     )
 }
