@@ -98,7 +98,7 @@ export default function OnBoarding() {
 		},
 	});
 
-    	// Mise à jour de translateX pour afficher la page courante
+    // Mise à jour de translateX pour afficher la page courante
 	useEffect(() => {
 		Animated.spring(translateX, {
 			toValue: -currentPage * screenWidth,
@@ -114,10 +114,6 @@ export default function OnBoarding() {
 			bounciness: 0,
 		}).start();
 	}, [currentPage]);
-
-    const handleGesture = (pageIndex) => {
-        setCurrentPage(pageIndex);
-    }
 
     return(
         <ScrollView>
