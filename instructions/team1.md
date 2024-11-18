@@ -6,7 +6,7 @@
 - Avoir une barre de recherche;
 - Avoir des filtres/catégories;
 
-### Pour cela, il faut:
+### Pour cela, il faut
 
 - Communiquer avec l'API pour récupérer une liste des cafés (faire attention à l'optimisation);
 - Suivez le design figma, pour le layout;
@@ -20,3 +20,9 @@
 - Une flatlist (horizontale) café recemment visité;
 - Une flatlist (horizontale) café à proximité (si trop compliqué, faire cafés populaires);
 - Une flatlist (verticale) de tout les cafés;
+
+### Ressources utiles
+
+- [Flatlist](https://reactnative.dev/docs/flatlist)
+- [TextInput](https://reactnative.dev/docs/textinput)
+- [Layout avec flexbox](https://reactnative.dev/docs/flexbox)

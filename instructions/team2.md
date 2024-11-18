@@ -21,3 +21,7 @@
 - Boutton sign up => vérifie validité des logs, et envoie une requête à l'API (le boutton appelle une fonction qui appelle le js script qui request l'API);
 - Quand request envoyée, mettre image url a qlq chose de random;
 - Une fois que le sign up est successful => rediriger vers `login.tsx`;
+
+### Ressources utiles
+
+- [Layout avec flexbox](https://reactnative.dev/docs/flexbox)

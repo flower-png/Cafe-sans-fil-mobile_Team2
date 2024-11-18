@@ -9,3 +9,8 @@
 - Nom;
 - Description rapide;
 - Utiliser exemple data comme exemple.
+
+### Ressources utiles
+
+- [Flatlist](https://reactnative.dev/docs/flatlist)
+- [Layout avec flexbox](https://reactnative.dev/docs/flexbox)

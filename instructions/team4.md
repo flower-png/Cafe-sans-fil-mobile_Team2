@@ -9,3 +9,7 @@
 - Boutton commander (aucune logique derrière, seulement l'afficher);
 - Boutton fermer le modal (icone croix en haut à droite);
 - Le modal ne peut pas prendre tout l'écran.
+
+### Ressources utiles
+
+- [Layout avec flexbox](https://reactnative.dev/docs/flexbox)
