@@ -101,7 +101,7 @@ export const itemObj =
                 "day": "Jeudi"
             },
             {
-                "blocks": [
+                "blockss": [
                 {
                     "end": "11:00",
                     "start": "10:00"
