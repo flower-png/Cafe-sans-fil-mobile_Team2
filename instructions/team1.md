@@ -10,4 +10,4 @@
 
 - Communiquer avec l'API pour récupérer une liste des cafés (faire attention à l'optimisation);
 - Suivez le design figma, pour le layout;
-- Utiliser les flatlist[https://reactnative.dev/docs/flatlist] pour automatiser et procéduraliser le render des cafés;
+- Utiliser les [flatlist](https://reactnative.dev/docs/flatlist) pour automatiser et procéduraliser le render des cafés;
