@@ -19,7 +19,7 @@ export default function Login() {
 
   // au lieu de tout de suite push vers homepage, il faut d'abord vérifier via l'api que les
   // logs dans les textInputs sont valides. Et afficher une erreur sinon.
-
+  const compteur = 0
   return (
     <View style={styles.loginContainer}>
       <Text style={{ textAlign: "center" }}>

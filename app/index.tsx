@@ -11,18 +11,18 @@ export default function Index() {
   return (
     <View>
 
-      <View style={styles.zone}>
+      {/* <View style={styles.zone}>
         <TouchableOpacity
           onPress={() => {router.push("/homepage")}}>
         <Text style={styles.hypertext}>Sauter à la homepage</Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
 
         <TouchableOpacity
           onPress={() => {router.push("/login")}}>
         <Text style={styles.hypertext}>Sauter au Login</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity
+        {/* <TouchableOpacity
           onPress={() => {router.push("/itemPage")}}>
         <Text style={styles.hypertext}>Sauter à la page Item</Text>
         </TouchableOpacity>
@@ -31,7 +31,7 @@ export default function Index() {
           onPress={() => {router.push("/cafe")}}>
         <Text style={styles.hypertext}>Sauter à la page Café</Text>
         </TouchableOpacity>
-      </View>
+      </View> */}
 
       <OnBoarding/>
     </View>
