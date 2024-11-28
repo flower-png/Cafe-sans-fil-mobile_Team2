@@ -28,7 +28,7 @@ export default function Login() {
 
       <TouchableOpacity
         onPress={() => {
-          router.push("/resetpwd");
+          router.push("/resetPwd");
         }}
       >
         <Text style={styles.hypertext}>

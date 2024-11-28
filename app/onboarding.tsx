@@ -82,7 +82,7 @@ function Page4(){
 
 // fonction qui va tout assembler en un
 // on ira de page en page en slidant vers la droite ou la gauche (avancer ou reculer)
-// ce serait nice d'avoir une sorte de progress bar en haut.
+// ce serait nice d'avoir une sorte de progress bar en bas.
 export default function OnBoarding() {
     const [currentPage, setCurrentPage] = useState(0);
 	const translateX = useRef(new Animated.Value(0)).current;
@@ -98,7 +98,7 @@ export default function OnBoarding() {
 
 			if (direction !== 0) {
 				setCurrentPage((prevPage) => {
-					const nextPage = Math.max(0, Math.min(prevPage + direction, 3)); // Limiter entre 0 et 1
+					const nextPage = Math.max(0, Math.min(prevPage + direction, 3)); // Limiter entre 0 et 3
 					return nextPage;
 				});
 			}
@@ -144,43 +144,44 @@ export default function OnBoarding() {
                 {/* progress bar */}
                 <View style={styles.barContainer}>
                     {/* si le current page est egal à la page --> le boutton est actif*/}
-                    {/* <LeftArrow width={40} height={40}/> */}
                     <TouchableOpacity 
                         onPress={() => {
                         if (currentPage >= 1) setCurrentPage(prevCurrentPage => prevCurrentPage - 1)}}
                     >
-                        <AntDesign name="left" size={30} color="blue" style={styles.arrowSVG}/>
-                    </TouchableOpacity>                    
+                        <AntDesign name="left" size={30} color="black" style={styles.arrowSVG}/>
+                    </TouchableOpacity>
                     <View style={styles.barButtons}>
-                        <TouchableOpacity style={currentPage === 0 ?  styles.progressActive : styles.progressInactive}
-                        onPress={() => {
-                            setCurrentPage(0)}}
-                        >
-                        </TouchableOpacity>
                         
-                        <TouchableOpacity style={currentPage === 1 ?  styles.progressActive : styles.progressInactive}
-                        onPress={() => {
-                            setCurrentPage(1)}}
-                        >
-                        </TouchableOpacity>
-                        
-                        <TouchableOpacity style={currentPage === 2 ?  styles.progressActive : styles.progressInactive}
-                        onPress={() => {
-                            setCurrentPage(2)}}
-                        >
-                        </TouchableOpacity>
-                        
-                        <TouchableOpacity style={currentPage === 3 ?  styles.progressActive : styles.progressInactive}
-                        onPress={() => {
-                            setCurrentPage(3)}}
-                        >
-                        </TouchableOpacity>
+                            <TouchableOpacity style={currentPage === 0 ?  styles.progressActive : styles.progressInactive}
+                            onPress={() => {
+                                setCurrentPage(0)}}
+                            >
+                            </TouchableOpacity>
+                            
+                            <TouchableOpacity style={currentPage === 1 ?  styles.progressActive : styles.progressInactive}
+                            onPress={() => {
+                                setCurrentPage(1)}}
+                            >
+                            </TouchableOpacity>
+
+                            <TouchableOpacity style={currentPage === 2 ?  styles.progressActive : styles.progressInactive}
+                            onPress={() => {
+                                setCurrentPage(2)}}
+                            >
+                            </TouchableOpacity>
+
+                            <TouchableOpacity style={currentPage === 3 ?  styles.progressActive : styles.progressInactive}
+                            onPress={() => {
+                                setCurrentPage(3)}}
+                            >
+                            </TouchableOpacity>
+
                     </View>
                     <TouchableOpacity 
                         onPress={() => {
                             if (currentPage < 3) setCurrentPage(prevCurrentPage => prevCurrentPage + 1)}}
                     >
-                        <AntDesign name="right" size={30} color="blue" style={styles.arrowSVG}/>
+                        <AntDesign name="right" size={30} color="black" style={styles.arrowSVG}/>
                     </TouchableOpacity>
                 </View>
             </SafeAreaView>
@@ -189,13 +190,14 @@ export default function OnBoarding() {
 }
 
 const styles = StyleSheet.create({
+
     arrowSVG: {
         margin: 5,
         transform: [{ translateY: 2 }]
     },
     barContainer: {
         flexDirection: 'row',
-        justifyContent: 'center', // aligned horizontally
+        justifyContent: 'center',
         position: 'absolute',
         bottom: 20,
         width: screenWidth,
@@ -205,17 +207,16 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         bottom: 20,
         transform: [{ translateY: 20 }],
-        
     },
     progressActive: {
-        backgroundColor: 'blue',
+        backgroundColor: 'black',
         margin: 10,
         padding:10,
         borderRadius: 20,
         width: 50
     },
     progressInactive: {
-        backgroundColor: 'black',
+        backgroundColor: '#a2a2a2',
         margin: 10,
         padding:10,
         borderRadius: 50,
@@ -244,7 +245,7 @@ const styles = StyleSheet.create({
         justifyContent:'center',
         alignItems:'center',
         borderRadius: 20,
-        backgroundColor: '#0057ac',
+        backgroundColor: 'black',
         padding:15,
         margin:100
     },
