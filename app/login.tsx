@@ -14,6 +14,7 @@ import { useRouter } from "expo-router";
 import { useState } from 'react';
 import { FONTS } from "../static/theme";
 import LoginButton from "@/components/LoginButton";
+import LoginWithSocial from "@/components/LoginWithSocial";
 
 function checkLogs(input_email, input_pwd){
 
@@ -44,8 +45,10 @@ export default function Login() {
       /* onPress={router.push("/homepage")}*/ >
       </LoginButton>
       <Text style={{textAlign: "center"}}>Ou</Text>
-      <Text>Continuer avec Google</Text>
-      <Text>Continuer avec Facebook</Text>
+      <LoginWithSocial 
+      platform={"Google"}></LoginWithSocial>
+      <LoginWithSocial 
+      platform={"Facebook"}></LoginWithSocial>
       <Text>Pas de compte? Créer un compte</Text>
 
 

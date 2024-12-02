@@ -22,7 +22,7 @@ const styles =  StyleSheet.create({
     text:{
         color: "white",
         textAlign: "center",
-        fontSize: 16,
+        fontSize: 14,
         fontWeight: 600,
 
     },
@@ -31,15 +31,5 @@ const styles =  StyleSheet.create({
         borderRadius: 10,
         padding: 10,
     }
-
-    /* container:{
-        color: "red",
-        textAlign: "center",
-    },
-
-    button:{
-        backgroundColor: "black",
-        padding: 16
-    },*/
 
 });
