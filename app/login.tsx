@@ -13,6 +13,7 @@ import { Text, TouchableOpacity, View, StyleSheet, TextInput, Pressable } from "
 import { useRouter } from "expo-router";
 import { useState } from 'react';
 import { FONTS } from "../static/theme";
+import LoginButton from "@/components/LoginButton";
 
 function checkLogs(input_email, input_pwd){
 
@@ -31,10 +32,24 @@ export default function Login() {
 
   return (
     <View style={styles.loginContainer}>
+      <Text>Logo</Text>
+      <Text style={styles.connexionTitle}>Connectez-vous à votre compte</Text>
+      <Text style={styles.specifiers}>Addresse électronique</Text>
       <TextInput value={email} onChangeText={setEmail} placeholder="Email" style={styles.textInputs}></TextInput>
+      <Text style={styles.specifiers}>Mot de passe</Text>
       <TextInput value={password} onChangeText={setPassword} placeholder="Password" style={styles.textInputs}></TextInput>
+      <Text style={styles.forgotPwd}>Mot de passe oublié ?</Text>
+      <LoginButton 
+      title="Se connecter" 
+      /* onPress={router.push("/homepage")}*/ >
+      </LoginButton>
+      <Text style={{textAlign: "center"}}>Ou</Text>
+      <Text>Continuer avec Google</Text>
+      <Text>Continuer avec Facebook</Text>
+      <Text>Pas de compte? Créer un compte</Text>
 
-      <TouchableOpacity >
+
+      {/* <TouchableOpacity >
         <Text>Login</Text>
       </TouchableOpacity>
 
@@ -56,7 +71,7 @@ export default function Login() {
         <Text style={{ ...styles.hypertext, marginTop: 15 }}>
           Login and go to homepage
         </Text>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
     </View>
   );
 }
@@ -73,11 +88,31 @@ const styles = StyleSheet.create({
     fontSize:20
   },
   loginContainer: {
-    flex: 1,
-    margin: 50,
-    alignContent: "center",
-    justifyContent: "center",
+    /* flex: 1,
+    margin: 50, */
+    padding: 16,
+    /* alignContent: "center",
+    justifyContent: "center", */
   },
+
+  connexionTitle: {
+    textAlign: "center",
+    fontSize: 32,
+    fontWeight: 700,
+  },
+
+  specifiers: {
+    color: "#6C7278",
+    fontSize: 12,
+  },
+
+  forgotPwd: {
+    textAlign: "right",
+    fontSize: 12,
+    fontWeight: 700,
+
+  },
+
   hypertext: {
     color: "blue",
     textDecorationLine: "underline",
