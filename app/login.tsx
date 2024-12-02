@@ -9,9 +9,11 @@ Sinon, afficher un texte d'erreur en dessous du boutton login
 Il faut en dessous du textInput password avoir un texte (hyperlink) vers la page resetPwd
 */
 
-import { Text, TouchableOpacity, View, StyleSheet } from "react-native";
+import { Text, TouchableOpacity, View, StyleSheet, TextInput } from "react-native";
 import { useRouter } from "expo-router";
 import { FONTS } from "../static/theme";
+import React from "react";
+import Button from "@/components/Button"; 
 
 export default function Login() {
   //initialisation du router (pour rediriger vers une autre page)
@@ -19,9 +21,21 @@ export default function Login() {
 
   // au lieu de tout de suite push vers homepage, il faut d'abord vérifier via l'api que les
   // logs dans les textInputs sont valides. Et afficher une erreur sinon.
+  const emailInput = () => {
+    const [text, onChangeText] = React.useState('Email');
+
+  }
 
   return (
     <View style={styles.loginContainer}>
+      <Text style={{textAlign:"center"}}>
+        Connectez votre compte
+      </Text>
+      <Button></Button>
+      <Text>
+        ???
+      </Text>
+      {/* 
       <Text style={{ textAlign: "center" }}>
         This is a fully functional login page
       </Text>
@@ -45,12 +59,13 @@ export default function Login() {
           Login and go to homepage
         </Text>
       </TouchableOpacity>
+      */}
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  loginContainer: {
+  /* loginContainer: {
     flex: 1,
     margin: 50,
     alignContent: "center",
@@ -61,6 +76,9 @@ const styles = StyleSheet.create({
     textDecorationLine: "underline",
     fontFamily: FONTS.generalText.fontFamily,
     textAlign: "center",
-  },
+  },*/
+  loginContainer:{
+    padding:16,
+  }
 });
 

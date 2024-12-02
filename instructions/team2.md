@@ -1,6 +1,10 @@
 # Sign In
 
 - 2 text inputs (email et password);
+useState variable
+textInput
+React Native log in 
+
 - Un boutton "Login";
 - Quand le boutton est cliqué, il faut vérifier si le user existe dans la BD (communiquer avec l'API);
 - Si le user existe => on redirige vers la page `homescreen.tsx`;
