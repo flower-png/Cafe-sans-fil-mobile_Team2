@@ -150,9 +150,8 @@ export default function OnBoarding() {
                     >
                         <AntDesign name="left" size={30} color="black" style={styles.arrowSVG}/>
                     </TouchableOpacity>
-                    <View style={styles.barButtons}>
-                        
-                            <TouchableOpacity style={currentPage === 0 ?  styles.progressActive : styles.progressInactive}
+                    {/* <View style={styles.barButtons}> */}
+                            {/* <TouchableOpacity style={currentPage === 0 ?  styles.progressActive : styles.progressInactive}
                             onPress={() => {
                                 setCurrentPage(0)}}
                             >
@@ -174,9 +173,20 @@ export default function OnBoarding() {
                             onPress={() => {
                                 setCurrentPage(3)}}
                             >
+                            </TouchableOpacity> */}
+                            <TouchableOpacity onPress={()=>{setCurrentPage(0)}}>
+                                <View style={currentPage === 0 ?  styles.progressActive : styles.progressInactive}></View>
                             </TouchableOpacity>
-
-                    </View>
+                            <TouchableOpacity onPress={()=>{setCurrentPage(1)}}>
+                                <View style={currentPage === 1 ?  styles.progressActive : styles.progressInactive}></View>
+                            </TouchableOpacity>
+                            <TouchableOpacity onPress={()=>{setCurrentPage(2)}}>
+                                <View style={currentPage === 2 ?  styles.progressActive : styles.progressInactive}></View>
+                            </TouchableOpacity>
+                            <TouchableOpacity onPress={()=>{setCurrentPage(3)}}>
+                                <View style={currentPage === 3 ?  styles.progressActive : styles.progressInactive}></View>
+                            </TouchableOpacity>
+                    {/* </View> */}
                     <TouchableOpacity 
                         onPress={() => {
                             if (currentPage < 3) setCurrentPage(prevCurrentPage => prevCurrentPage + 1)}}
@@ -193,34 +203,34 @@ const styles = StyleSheet.create({
 
     arrowSVG: {
         margin: 5,
-        transform: [{ translateY: 2 }]
+        transform: [{ translateY: 3 }]
     },
     barContainer: {
         flexDirection: 'row',
         justifyContent: 'center',
-        position: 'absolute',
-        bottom: 20,
+        //position: 'absolute',
         width: screenWidth,
+        transform:[{translateY:-30}]
     },
     barButtons: {
-        flexDirection: 'row',
-        justifyContent: 'center',
         bottom: 20,
-        transform: [{ translateY: 20 }],
+        transform: [{ translateY: 0 }],
     },
     progressActive: {
-        backgroundColor: 'black',
         margin: 10,
         padding:10,
-        borderRadius: 20,
-        width: 50
+        borderColor:'black',
+        borderRadius:10,
+        borderWidth:2,
+        width: 50,
     },
     progressInactive: {
-        backgroundColor: '#a2a2a2',
         margin: 10,
         padding:10,
-        borderRadius: 50,
-        width:50,
+        borderColor:'#a2a2a2',
+        borderRadius:10,
+        borderWidth:2,
+        width: 50,
     },
     image: {
         alignSelf: 'auto',
