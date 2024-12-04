@@ -45,7 +45,9 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         backgroundColor: "white",
         borderRadius: 10,
-        padding: 10,
-        borderBlockColor: "#EBEBEBEE"
+        padding: 12,
+        borderColor: "#EDF1F3",
+        borderWidth: 1,
+        boxShadow: "0px 1px 2px 0px rgba(228, 229, 231, 0.24)"
     }
 })

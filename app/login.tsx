@@ -33,24 +33,44 @@ export default function Login() {
 
   return (
     <View style={styles.loginContainer}>
-      <Text>Logo</Text>
+      <Text style={styles.logo}>Logo</Text>
+
       <Text style={styles.connexionTitle}>Connectez-vous à votre compte</Text>
+
       <Text style={styles.specifiers}>Addresse électronique</Text>
       <TextInput value={email} onChangeText={setEmail} placeholder="Email" style={styles.textInputs}></TextInput>
       <Text style={styles.specifiers}>Mot de passe</Text>
       <TextInput value={password} onChangeText={setPassword} placeholder="Password" style={styles.textInputs}></TextInput>
-      <Text style={styles.forgotPwd}>Mot de passe oublié ?</Text>
+      <TouchableOpacity
+       onPress={() => {
+        router.push("/resetPwd");
+      }}>
+        <Text style={styles.forgotPwd}>Mot de passe oublié ?</Text>
+      </TouchableOpacity>
+      
       <LoginButton 
       title="Se connecter" 
-      /* onPress={router.push("/homepage")}*/ >
+      onPress={() => router.push("/homepage")}
+      style={{marginVertical: 8 }}>
       </LoginButton>
-      <Text style={{textAlign: "center"}}>Ou</Text>
-      <LoginWithSocial 
-      platform={"Google"}></LoginWithSocial>
-      <LoginWithSocial 
-      platform={"Facebook"}></LoginWithSocial>
-      <Text>Pas de compte? Créer un compte</Text>
 
+      <View style={{flexDirection: "row", alignItems: "center"}}>
+        <View style={styles.divider}></View>
+        <Text style={{textAlign: "center", margin: 12, color: "#6C7278"}}>Ou</Text>
+        <View style={styles.divider}></View>
+      </View>
+
+      <View style={styles.socialLogin}>
+        <LoginWithSocial 
+        platform={"Google"}></LoginWithSocial>
+        <LoginWithSocial 
+        platform={"Facebook"}></LoginWithSocial>
+      </View>
+
+      <View style={{flexDirection:"row", justifyContent: "center", gap: 4,}}>
+        <Text style={{color: "#6C7278",fontSize: 12}}>Pas de compter?</Text>
+        <Text style={{fontWeight: 600, fontSize: 12}}>Créer un compte</Text>
+      </View>
 
       {/* <TouchableOpacity >
         <Text>Login</Text>
@@ -70,58 +90,70 @@ export default function Login() {
         onPress={() => {
           router.push("/homepage");
         }}
-      >
+      > 
         <Text style={{ ...styles.hypertext, marginTop: 15 }}>
           Login and go to homepage
-        </Text>
+        </Text> 
       </TouchableOpacity> */}
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  logo: {
+    textAlign: "center"
+  },
   textInputs:{
     alignItems:'flex-end',
     flexDirection: 'row',
     borderWidth:2,
-    padding: 20,
-    margin:10,
-    borderColor:'black',
+    padding: 12,
+    marginVertical: 8,
+    borderColor:'#E4E5E73D',
+    // boxShadow: "0px 1px 2px 0px rgba(228, 229, 231, 0.24)",
     borderRadius:10,
-    fontSize:20
+    fontSize:16
   },
   loginContainer: {
     /* flex: 1,
     margin: 50, */
-    padding: 16,
+    padding: 32,
+    backgroundColor: "white",
     /* alignContent: "center",
     justifyContent: "center", */
   },
-
   connexionTitle: {
     textAlign: "center",
     fontSize: 32,
     fontWeight: 700,
+    marginVertical: 20,
   },
-
   specifiers: {
     color: "#6C7278",
     fontSize: 12,
   },
-
   forgotPwd: {
     textAlign: "right",
     fontSize: 12,
     fontWeight: 700,
-
+    marginBottom: 12,
   },
-
+  divider: {
+    borderColor: "#EDF1F3",
+    borderWidth: 1,
+    // borderBottomWidth: 1,
+    flex: 1,
+  },
+  socialLogin: {
+    marginTop: 8, 
+    gap: 12, 
+    marginBottom: 24,
+  }, 
   hypertext: {
     color: "blue",
     textDecorationLine: "underline",
     fontFamily: FONTS.generalText.fontFamily,
     textAlign: "center",
   },
-  
 });
 

@@ -1,15 +1,16 @@
-import { View, Text , TouchableOpacity, StyleSheet} from 'react-native'
+import { View, Text , TouchableOpacity, StyleSheet, StyleProp, ViewStyle} from 'react-native'
 import React from 'react'
 import { Router } from 'expo-router';
 
 interface LoginButtonParams {
     title: string;
-    // onPress: () => Router;
+    onPress: () => void;
+    style: StyleProp<ViewStyle>;
 }
 
-export default function LoginButton ({title/*, onPress*/}: LoginButtonParams) {
+export default function LoginButton ({title, onPress, style}: LoginButtonParams) {
     return (
-        <TouchableOpacity style={styles.button} /*onPress={onPress}*/>
+        <TouchableOpacity style={[styles.button, style]} onPress={onPress}>
             <Text style={styles.text}>
                 {title}
             </Text>
@@ -29,7 +30,7 @@ const styles =  StyleSheet.create({
     button: {
         backgroundColor: "black",
         borderRadius: 10,
-        padding: 10,
+        padding: 12,
     }
 
 });
