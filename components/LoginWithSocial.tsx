@@ -8,6 +8,7 @@ interface LoginWithSocialParams{
 
 export default function LoginWithSocial({platform}: LoginWithSocialParams) {
     // Images à changer pour libre de droit 
+    // Change l'image selon la plateform utilisée
     const imageSource = platform === "Google"
     ? require('../assets/images/signInSocials_images/google_logo.webp')
     : platform === "Facebook"
@@ -22,8 +23,6 @@ export default function LoginWithSocial({platform}: LoginWithSocialParams) {
             <Text style={styles.text}>
                 Continuer avec {platform}
             </Text>
-        {/*<Image source={imageSource}></Image> */}
-        
     </TouchableOpacity>
   )
 }
